@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#092d62">
+  <meta name="description" content="Krishna Learning Academy — Learn Smart, Achieve Big. Explore classes, NCERT books, study resources and practice quizzes.">
+  <title>Krishna Learning Academy | Learn Smart, Achieve Big</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📚 Learn Smart, Achieve Big</span>
+      <span>Classes 1–12 · JEE · NEET · Competitive Exams</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Krishna Learning Academy home">
+        <img src="logo.png" alt="Krishna Learning Academy logo" class="brand-logo">
+        <span class="brand-text">
+          <strong>KRISHNA</strong>
+          <small>LEARNING ACADEMY</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#library">Study Library</a>
+        <a href="#tutor">AI Tutor</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#about">About Us</a>
+        <a href="#contact" class="nav-cta">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> YOUR LEARNING JOURNEY STARTS HERE</div>
+          <h1>Learn Smart.<br><span>Achieve Big.</span></h1>
+          <p class="hero-description">
+            Build strong concepts, practise every day, and move closer to your goals
+            with Krishna Learning Academy.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#classes">Explore Classes <span>→</span></a>
+            <a class="btn btn-outline" href="#library">Explore Study Material</a>
+          </div>
+          <div class="hero-note">
+            <span class="note-icon">✓</span>
+            Learning resources for school students and competitive exam aspirants
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card">
+            <div class="visual-card-top">
+              <div>
+                <span class="mini-label">YOUR GOALS</span>
+                <h3>Make progress every day</h3>
+              </div>
+              <span class="book-icon">✦</span>
+            </div>
+            <div class="progress-item">
+              <div class="progress-heading"><span>Concept learning</span><strong>Learn</strong></div>
+              <div class="progress-track"><span style="width: 88%"></span></div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-heading"><span>Daily practice</span><strong>Practise</strong></div>
+              <div class="progress-track"><span style="width: 72%"></span></div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-heading"><span>Revision</span><strong>Improve</strong></div>
+              <div class="progress-track"><span style="width: 64%"></span></div>
+            </div>
+            <div class="visual-footer">
+              <span class="visual-avatar">KLA</span>
+              <div><strong>Your future matters</strong><small>One lesson at a time</small></div>
+              <span class="sparkle">✦</span>
+            </div>
+          </div>
+          <div class="floating-chip chip-top">📖 NCERT Resources</div>
+          <div class="floating-chip chip-bottom">🎯 Practice & Learn</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="container stats-grid">
+        <div class="stat"><strong>01–12</strong><span>School Classes</span></div>
+        <div class="stat"><strong>NCERT</strong><span>Book Resources</span></div>
+        <div class="stat"><strong>JEE / NEET</strong><span>Exam Preparation</span></div>
+        <div class="stat"><strong>Learn</strong><span>Practise & Revise</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="classes">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">FIND YOUR CLASS</span>
+          <h2>Choose your <span>learning path</span></h2>
+          <p>Choose your class to explore relevant learning resources and NCERT books.</p>
+        </div>
+        <div class="class-grid" id="classGrid"></div>
+        <div class="center-action">
+          <a href="#library" class="text-link">Browse all study resources <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section library-section" id="library">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">YOUR STUDY SPACE</span>
+          <h2>Study <span>Library</span></h2>
+          <p>Select a class and subject to find chapter suggestions and official NCERT resources.</p>
+        </div>
+
+        <div class="library-panel">
+          <div class="library-controls">
+            <div class="field">
+              <label for="classSelect">Select Class</label>
+              <select id="classSelect">
+                <option value="">Choose a class</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="subjectSelect">Select Subject</label>
+              <select id="subjectSelect" disabled>
+                <option value="">Choose a subject</option>
+              </select>
+            </div>
+            <div class="field search-field">
+              <label for="chapterSearch">Search a chapter</label>
+              <input id="chapterSearch" type="search" placeholder="e.g. Light, Motion..." autocomplete="off">
+            </div>
+          </div>
+
+          <div class="library-result-heading">
+            <div>
+              <span class="section-kicker">RESOURCE COLLECTION</span>
+              <h3 id="resourceHeading">Explore your resources</h3>
+            </div>
+            <a class="btn btn-small btn-outline" href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener noreferrer">Official NCERT Portal ↗</a>
+          </div>
+
+          <div class="resource-grid" id="resourceGrid">
+            <div class="empty-state">
+              <div class="empty-icon">📚</div>
+              <h3>Your study resources start here</h3>
+              <p>Select your class and subject to explore available resources.</p>
+            </div>
+          </div>
+          <p class="disclaimer">NCERT resources open on the official NCERT website. Chapter suggestions on this page are for guidance; check the current syllabus and textbook edition.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tutor-section" id="tutor">
+      <div class="container tutor-grid">
+        <div class="tutor-copy">
+          <span class="section-kicker">LEARN WITH CURIOSITY</span>
+          <h2>Meet your <span>AI Study Buddy</span></h2>
+          <p>Ask a study question, get a quick explanation, or ask for a simple revision plan. This is a demo tutor with sample responses.</p>
+          <ul class="check-list">
+            <li><span>✓</span> Simple explanations</li>
+            <li><span>✓</span> Study tips and revision ideas</li>
+            <li><span>✓</span> Helpful starting points for questions</li>
+          </ul>
+          <p class="small-note">Demo only — it is not connected to a live AI service.</p>
+        </div>
+
+        <div class="chat-card">
+          <div class="chat-header">
+            <div class="bot-avatar">✦</div>
+            <div><strong>KLA Study Buddy</strong><small><span class="live-dot"></span> Demo mode</small></div>
+            <span class="chat-menu">•••</span>
+          </div>
+          <div class="chat-messages" id="chatMessages" aria-live="polite">
+            <div class="message bot-message">Hi! 👋 I’m your KLA Study Buddy. What would you like help with today?</div>
+          </div>
+          <div class="quick-prompts">
+            <button type="button" class="prompt-chip" data-prompt="Explain Newton's laws">Newton's laws</button>
+            <button type="button" class="prompt-chip" data-prompt="Explain mirror formula">Mirror formula</button>
+            <button type="button" class="prompt-chip" data-prompt="Give me study tips">Study tips</button>
+          </div>
+          <form class="chat-form" id="chatForm">
+            <input id="chatInput" type="text" placeholder="Ask a study question..." aria-label="Ask a study question" required>
+            <button type="submit" aria-label="Send message">➤</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">TEST YOUR KNOWLEDGE</span>
+          <h2>Quick <span>Practice Quiz</span></h2>
+          <p>Try these sample science questions and check your score instantly.</p>
+        </div>
+        <div class="quiz-card">
+          <div class="quiz-top">
+            <div><span class="section-kicker">SAMPLE SCIENCE QUIZ</span><h3>Ready to challenge yourself?</h3></div>
+            <span class="quiz-count">3 Questions</span>
+          </div>
+          <form id="quizForm">
+            <fieldset class="question">
+              <legend>1. What is the SI unit of force?</legend>
+              <label class="option"><input type="radio" name="q1" value="a"> Joule</label>
+              <label class="option"><input type="radio" name="q1" value="b"> Newton</label>
+              <label class="option"><input type="radio" name="q1" value="c"> Watt</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend>2. Which mirror is commonly used as a rear-view mirror?</legend>
+              <label class="option"><input type="radio" name="q2" value="a"> Plane mirror</label>
+              <label class="option"><input type="radio" name="q2" value="b"> Concave mirror</label>
+              <label class="option"><input type="radio" name="q2" value="c"> Convex mirror</label>
+            </fieldset>
+            <fieldset class="question">
+              <legend>3. Which process do green plants use to make food?</legend>
+              <label class="option"><input type="radio" name="q3" value="a"> Photosynthesis</label>
+              <label class="option"><input type="radio" name="q3" value="b"> Respiration only</label>
+              <label class="option"><input type="radio" name="q3" value="c"> Evaporation</label>
+            </fieldset>
+            <button class="btn btn-primary" type="submit">Check My Answers →</button>
+            <div class="quiz-result" id="quizResult" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-logo-wrap">
+          <div class="about-logo-card">
+            <img src="logo.png" alt="Krishna Learning Academy emblem">
+            <p>Learn Smart, Achieve Big</p>
+          </div>
+          <div class="about-decoration decoration-one"></div>
+          <div class="about-decoration decoration-two"></div>
+        </div>
+        <div class="about-copy">
+          <span class="section-kicker">ABOUT OUR ACADEMY</span>
+          <h2>Learning with purpose.<br><span>Growing with confidence.</span></h2>
+          <p>Krishna Learning Academy aims to help learners strengthen their concepts, practise consistently and build confidence in their studies.</p>
+          <p>Our learning focus includes school subjects, board exam preparation and guidance for competitive examinations.</p>
+          <div class="faculty-card">
+            <div class="faculty-icon">🎓</div>
+            <div><strong>Our Faculty</strong><p>Vikash Sir · Aniket Sir</p></div>
+          </div>
+          <a href="#contact" class="btn btn-primary">Get in Touch →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-card">
+        <div>
+          <span class="section-kicker">LET'S CONNECT</span>
+          <h2>Ready to learn with us?</h2>
+          <p>Contact Krishna Learning Academy for course and class information.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-light" href="tel:8709647934">☎ 8709647934</a>
+          <a class="btn btn-glass" href="mailto:krishnamurariroy01@gmail.com">✉ Email Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#home">
+        <img src="logo.png" alt="Krishna Learning Academy logo" class="brand-logo">
+        <span class="brand-text"><strong>KRISHNA</strong><small>LEARNING ACADEMY</small></span>
+      </a>
+      <p>Learn Smart, Achieve Big — every day, one concept at a time.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#library">Study Library</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="currentYear"></span> Krishna Learning Academy.</span>
+      <span>All Rights Reserved to Aniket@31</span>
+    </div>
+  </footer>
+</body>
+</html>
